@@ -23,18 +23,19 @@ import java.util.Arrays;
  */
 
 public class Main{
-
-
     public static void main(String[] args) {
-        My_ArrayList<Integer> list = new My_ArrayList<>(10);
-        list.add(1);
-        list.add(2);
-        list.add(3);
+        My_ArrayList<Integer> list = new My_ArrayList<>(15);
         list.add(4);
+        list.add(1);
+        list.add(3);
         list.add(5);
-        Integer[] array = list.toArray();
-        System.out.println(Arrays.toString(array));
 
+        My_ArrayList<String> list1 = new My_ArrayList<>(15);
+        list1.add("");
+        list1.add("");
+       
+        list.addAll(list1);
+        System.out.println(list);
 
 
     }

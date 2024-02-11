@@ -1,5 +1,4 @@
 package Lesson24.MyArrays;
-
 import Lesson24.MyArrays.AbstractList.ArrayLists.My_ArrayList;
 
 
@@ -20,7 +19,7 @@ public interface ListFather<E> {
 
     boolean remove(E o);
 
-    boolean addAll(E[] c);
+    boolean addAll(My_ArrayList c);
 
     E get(int index);
 

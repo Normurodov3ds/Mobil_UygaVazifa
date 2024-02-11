@@ -24,7 +24,7 @@ public class My_ArrayList<E> extends AbstractList<E> {
     }
 
     private void capasity() {
-        if (capasity - size <= 0) {
+        if (capasity - size <= 0) { //  [1 2 3 4 5 5 5 5 5] 10
             capasity = (capasity * 3 / 2) + 1;
         }
     }
@@ -64,14 +64,14 @@ public class My_ArrayList<E> extends AbstractList<E> {
     @Override
     public E[] toArray() {
         size();
-        if (obj instanceof Integer[]) {
+        if (obj[0] instanceof Integer) {
             Integer[] a = new Integer[size];
             for (int i = 0; i < size; i++) {
                 a[i] = (Integer) obj[i];
             }
             E[] a1 = (E[]) a;
             return a1;
-        } else if (obj instanceof String[]) {
+        } else if (obj[0] instanceof String) {
             String[] a = new String[size];
             for (int i = 0; i < size; i++) {
                 a[i] = (String) obj[i];
@@ -111,64 +111,71 @@ public class My_ArrayList<E> extends AbstractList<E> {
 
     @Override
     public Object[] toArrays() {
-        return obj;
+        Object[] objects = new Object[size()];
+        for (int i = 0; i < size(); i++) {
+            obj[i] = objects[i];
+        }
+        return objects;
     }
 
     @Override
     public boolean add(E c) {
-        capasity();
-        Object[] objects = new Object[capasity];
-        int i = 0;
-        for (int j = 0; j < size(); j++) {
-            objects[i] = obj[j];
-            i++;
-        }
-        objects[i] = c;
-        obj = objects;
-        size();
-        return true;
-    }
-
-    @Override
-    public boolean remove(E c) {
-        if (contains(c)) {
+        if (c != null) {
             capasity();
-            Object[] objects = new Object[capasity - 1];
+            Object[] objects = new Object[capasity];
             int i = 0;
-            for (int j = 0; j < this.obj.length; j++) {
-                if (c == obj[j] || c.equals(obj[j])) {
-                    continue;
-                }
+            for (int j = 0; j < size(); j++) {
                 objects[i] = obj[j];
                 i++;
             }
+            objects[i] = c;
             obj = objects;
-            size--;
+            size();
+
             return true;
         }
         return false;
     }
 
     @Override
-    public boolean addAll(E[] c) {
-        capasity();
-        Object[] objects = new Object[capasity + c.length];
-        int i = 0;
-        for (int j = 0; j < this.obj.length; j++) {
-            objects[i] = obj[j];
-            i++;
+    public boolean remove(E c) {
+        if (c != null) {
+            if (contains(c)) {
+                capasity();
+                Object[] objects = new Object[size() - 1];
+                int i = 0;
+                for (int j = 0; j < size; j++) {
+                    if (c == obj[j] || c.equals(obj[j])) {
+                        continue;
+                    }
+                    objects[i] = obj[j];
+                    i++;
+                }
+                obj = objects;
+                size();
+                return true;
+            }
         }
-        for (Object e : c) {
-            objects[i] = e;
-            i++;
+        return false;
+    }
+
+    @Override
+    public boolean addAll(My_ArrayList c) {
+        try {
+            for (int i = 0; i < c.size(); i++) {
+                add((E) c.obj[i]);
+            }
+            return true;
+        }catch (ClassCastException s){
+            return false;
         }
-        obj = objects;
-        size = i;
-        return true;
     }
 
     @Override
     public E get(int index) {
+        if (index>=size()){
+            return null;
+        }
         if (contains((E) obj[index])) {
             E e = (E) obj[index];
             return e;
@@ -188,7 +195,7 @@ public class My_ArrayList<E> extends AbstractList<E> {
     @Override
     public void add(int index, E e) {
         capasity();
-        Object[] objects = new Object[capasity + 1];
+        Object[] objects = new Object[capasity];
         int i = 0;
         for (int j = 0; j < size(); j++) {
             if (j == index) {
@@ -260,7 +267,7 @@ public class My_ArrayList<E> extends AbstractList<E> {
             o[i] = obj[i];
         }
         Arrays.sort(o);
-        System.out.println(o);
+        obj = o;
     }
 
 }
