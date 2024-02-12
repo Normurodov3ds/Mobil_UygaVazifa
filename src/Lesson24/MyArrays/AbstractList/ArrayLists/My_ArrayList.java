@@ -131,7 +131,6 @@ public class My_ArrayList<E> extends AbstractList<E> {
             objects[i] = c;
             obj = objects;
             size();
-
             return true;
         }
         return false;
