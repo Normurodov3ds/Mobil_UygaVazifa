@@ -1,4 +1,4 @@
-package S.O.L.I.D.Single_Responsiblity;
+package S.O.L.I.D.Single_Responsiblity.developers;
 
 public class Devoloper {
     private String name;

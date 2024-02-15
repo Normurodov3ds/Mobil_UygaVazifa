@@ -1,6 +1,8 @@
 package S.O.L.I.D.Single_Responsiblity;
 
-public class Main extends Eat{
+import S.O.L.I.D.Single_Responsiblity.developers.*;
+
+public class Main extends Eat {
 
     public static void main(String[] args) {
         Devoloper senior = new Devoloper("Komil",25,4);

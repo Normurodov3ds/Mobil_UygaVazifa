@@ -1,8 +1,4 @@
-package Lesson27.Single_Responsibility;
-
-import S.O.L.I.D.Single_Responsiblity.Devoloper;
-
-import java.util.function.Function;
+package Lesson27.Single_Responsibility.Developers;
 
 public class Developer {
     private String name;

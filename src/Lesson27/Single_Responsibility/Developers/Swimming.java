@@ -1,4 +1,4 @@
-package Lesson27.Single_Responsibility;
+package Lesson27.Single_Responsibility.Developers;
 
 public class Swimming implements SwimmingFather{
 
