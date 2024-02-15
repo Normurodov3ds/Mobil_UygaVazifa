@@ -53,11 +53,9 @@ public class ConcrentBuilder implements HomeBuilder {
         }
     }
 
-    public void chageWall() {
-
-    }
 
     public int chageBasen() {
+
         Scanner in = new Scanner(System.in);
         int i =1;
         for (HomeBuilder.HomeBasen value : HomeBuilder.HomeBasen.values()) {
@@ -69,6 +67,7 @@ public class ConcrentBuilder implements HomeBuilder {
                 case HomeBuilder.HomeBasen.SimpleBasen -> System.out.println(" 50_000$");
             }
         }
+
         int index = in.nextInt();
         switch (index) {
             case 1 -> {
