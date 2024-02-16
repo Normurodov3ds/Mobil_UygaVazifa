@@ -1,6 +1,6 @@
-package Lesson27.Open_Close;
+package Lesson27.Open_Close.Writer;
 
-public class Pencil implements PencilFather{
+public class Pencil implements PencilFather {
 
 
     @Override

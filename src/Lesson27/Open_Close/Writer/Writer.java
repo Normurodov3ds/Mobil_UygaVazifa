@@ -1,4 +1,4 @@
-package Lesson27.Open_Close;
+package Lesson27.Open_Close.Writer;
 
 public class Writer {
     private String text;
