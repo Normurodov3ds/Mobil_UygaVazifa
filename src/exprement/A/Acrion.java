@@ -1,4 +1,4 @@
-package exprement;
+package exprement.A;
 
 public interface Acrion {
     int salom = 15;

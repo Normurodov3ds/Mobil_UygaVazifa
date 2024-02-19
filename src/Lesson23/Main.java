@@ -1,9 +1,6 @@
 package Lesson23;
 
-import exprement.A;
-
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Main {

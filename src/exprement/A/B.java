@@ -1,4 +1,7 @@
-package exprement;
+package exprement.A;
+
+import exprement.A.A;
+import exprement.A.Acrion;
 
 public class B {
     public A a;

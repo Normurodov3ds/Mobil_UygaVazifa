@@ -1,4 +1,4 @@
-package exprement;
+package exprement.A;
 
 public class A {
     private Acrion acrion;

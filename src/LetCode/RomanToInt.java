@@ -1,4 +1,4 @@
-package Lesson23;
+package LetCode;
 
 import java.util.Arrays;
 

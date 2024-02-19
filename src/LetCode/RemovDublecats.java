@@ -1,4 +1,4 @@
-package Lesson23;
+package LetCode;
 
 public class RemovDublecats {
     public static void main(String[] args) {
